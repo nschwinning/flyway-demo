@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: flyway-demo
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  datasource:
+    username: smexnet
+    password: smexnet
+    url: jdbc:postgresql://localhost:5432/flyway-qa
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    table: schema_version
+    enabled: true
+server:
+  port: 8085
